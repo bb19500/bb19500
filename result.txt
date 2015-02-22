@@ -1,0 +1,193 @@
+Wellcome to Git version 1.9.5-preview20141217 
+Run 'git help git' to display the help index. 
+Run 'git help <command>' to display help for specific commands.
+
+BashkimPC@BASHKIM ~ (master) $ git init bb19500 
+Initialized empty Git repository in C:/Users/BashkimPC/bb19500/.git/ BashkimPC@BASHKIM — (master) 
+MINGW32:/c/Users/BashkimPC  ~ (master)
+
+_________________________________________________________________
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git status 
+On branch master 
+Initial commit 
+nothing to commit (create/copy files and use "git add" to track) 
+BashkimPC@BASHKIM ~/bbl9500 (master) $ 
+__________________________________________________________________
+BashkimPC@BASHKIM ~ /bb19500 (master) 
+$ touch bashkim.txt 
+BashkimPC@BASHKIM ~ /bb19500 (master) 
+$ echo "This is a poem used for testing" » bashkim.txt 
+BashkimPC@BASHKIM ~ /bb19500 (master) 
+$ git status 
+on branch master 
+Initial commit 
+Untracked files: 
+(use "git add <file>..." to include in what will be committed) 
+                               bashkim.txt
+nothing added to commit but untracked files present (use "git add" to track) 
+________________________________________________________________________
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git add '*'
+warning: LF will be replaced by CRLF in bashkim.txt. 
+The file will have its original line endings in your working directory. 
+BashkimPC@BASHKIM ~/bb19500 (master) $ git commit -m "This is the first commit" 
+[master (root-commit) 3094f4e] This is the first commit 
+warning: LF will be replaced by CRLF in bashkim.txt. 
+The file will have its original line endings in your working directory.
+ 1 file changed, 1 insertion(+) 
+create mode 100644 bashkim.txt 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git status 
+On branch master 
+nothing to commit, working directory clean 
+__________________________________________________________________
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git log 
+commit 3094f4e788663f15e2242913d0022a16926f43e7 
+Author: 6619500 <bb19500@gmail.com> 
+Date: Sat Feb 21 21:04:11 2015 +0100 
+This is the first commit 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$
+__________________________________________________________________
+BaskimPC@BASHKIM ~ /bb19500 (master) $ echo "This is the poem edited. In this edited poem will be shown the work in he GIT" > bashkim.txt 
+BashkimPC@BASHKIM ~/bb19500 (master) $ git show 
+commit 3094f4e788663f15e2242913d0022a16926f43e7 
+author: 6619500 <bb19500@gmail.com> 
+Date: Sat Feb 21 21:04:11 2015 +0100 
+This is the first commit 
+diff --git a/bashkim.txt b/bashkim.txt 
+new file mode 100644 
+index 0000000..3724561 
+--- /dev/null 
++++ b/bashkim.txt 
+@@ -0,0 +1 @@
++ This is a poem used for testing 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+________________________________________________________________
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git init subfolder 
+Initialized empty Git repository in c:/users/BashkimPC/bb19500/subfolder/.git/ 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ cd subfolder/ 
+BashkimPC@BASHKIM ~/bb19500/subfolder (master) 
+$ touch textl.txt text2.txt 
+BashkimPC@BASHKIM ~/bb19500/subfolder (master) 
+$ echo "Same text in the two text files using Git" > textl.txt 
+BashkimPC@BASHKIM ~/bb19500/subfolder (master) 
+$ echo "Same text in the two text files using Git" > text2.txt 
+BashkimPC@BASHKIM ~/bb19500/subfolder (master) 
+$
+_______________________________________________________________
+BashkimPC@BASHKIM ~/bb19500/subfolder (master)
+ $ git add '*' 
+BashkimPC@BASHKIM ~/bb19500/subfolder (master) 
+$ git commit -m "This is the second commit" 
+[master (root-commit) 92e7b15] This is the second commit
+ warning: LF will be replaced by CRLF in text1.txt. 
+The file will have its original line endings in your working directory. 
+'warning: LF will be replaced by CRLF in text2.txt. 
+The file will have its original line endings in your working directory.
+ 2 files changed, 2 insertions(+) 
+create mode 100644 text1.txt
+create mode 100644 text2.txt 
+BashkimPC@BASHKIM ~/bb19500/subfolder (master) 
+$ git log 
+commit 92e7b155a6025a831bb6acea2eea6056e9dd0f80 
+author: bb19500 <bb19500@gmail.com> 
+Date: Sat Feb 21 21:33:52 2015 +0100 
+This is the second commit 
+BashkimPC@BASHKIM ~/bb19500/subfolder (master) 
+$
+______________________________________________________________
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git log 
+commit 3f9635a59b60e21f3b28703ab162d9289fe3ca92 
+author: 6619500 <bb19500@gmail.com> 
+Date: Sat Feb 21 21:52:44 2015 +0100 
+Adding the folder 
+commit 3094f4e788663f15e2242913d0022a16926f43e7 
+author: 6619500 <bb19500@gmail.com> 
+Date: Sat Feb 21 21:04:11 2015 +0100 
+This is the first commit 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ 
+_______________________________________________________________
+_______________________________________________________________
+BashkimPC@BASHKIM ~/bb19500 (master) $ git checkout test 
+Switched to branch 'test' 
+BashkimPC@BASHKIM ~/bb19500 (test) 
+$ git pull origin master 
+From https://github.com/bb19500/bb19500 
+* branch master ->FETCH_HEAD 
+updating 440a0bc..dOlf1d8 
+Fast-forward 
+test2 I 29 +++++++- 
+test2.txt I 1 + 
+2 files changed, 30 insertions(+)
+ create mode 100644 test2
+ create mode 100644 test2.txt 
+
+______________________________________________________________
+
+BashkimPC@BASHKIM ~/bb19500 (test) 
+$ git push origin test 
+Username for 'https://github.com': bb19500 
+Password for 'https://bb19500@github.com': 
+Total 0 (delta 0), reused 0 (delta 0) 
+remote: This repository moved. Please use the new location: 
+remote: https://github.com/bb19500/tasd.git 
+To https://github.com/bb19500/bb19500.git 
+* [new branch] test -> test 
+BashkimPC@BASHKIM ~/bb19500 (test) 
+__________________________________________________________
+BashkimPC@BASHKIM ~/bb19500 (test)
+ $ git checkout master 
+Switched to branch 'master' 
+Your branch is ahead of 'origin/master' by 1 commit. 
+(use "git push" to publish your local commits) 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git pull origin test 
+From https://github.com/bb19500/b619500 
+* branch test -> FETCH_HEAD already up-to-date. 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$
+___________________________________________
+BashkimPC@B ~/bb19500 (master) 
+$ git pull origin master test 
+From https://gitthub.com/bb19500/bb19500 
+* branch master -> FETCH_HEAD 
+* branch test -> FETCH_HEAD 
+Aready up-to-date. 
+BASHKIMPC ~/bb19500 (master) 
+$ git merge test 
+Aready up-to-date. 
+BashkimPC@BASHKIM:~/bb19500 (master) 
+$ git checkout master 
+Aready on 'master' 
+Your branch is ahead of 'origin/master' by 1 commit. 
+(use "git push" to publish your local commits) 
+BashkimPC@BASHKIM ~bb19500 (master) 
+$ git pull origin master 
+From https://g1thub.com/bb19500/bb19500 
+* branch master -> FETCH_HEAD 
+Aready up-to-date. 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git merge test 
+Already up-to-date. 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+BashkimPC@BASHKIM ~/bb19500 (master) 
+$ git push origin master 
+username for 'https://github.com': bb19500 
+Password for 'https://bb19500@github.com': 
+Counting objects: 3, done. 
+Delta compression using up to 4 threads. 
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 208 bytes 1 0 bytes/s, done. 
+Total 2 (delta 1), reused 0 (delta 0) remote: 
+This repository moved. 
+Please use the new location: remote: https://github.com/bb19500/tasd.git 
+To https://github.com/bb19500/bb19500.git 
+dOlf1d8..ea9f908 master -> master 
+BashkimPC@BASHKIM ~/bb19500 (master) $ 
