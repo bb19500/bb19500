@@ -17,7 +17,7 @@ __________________________________________________________________
 BashkimPC@BASHKIM ~ /bb19500 (master) 
 $ touch bashkim.txt 
 BashkimPC@BASHKIM ~ /bb19500 (master) 
-$ echo "This is a poem used for testing" » bashkim.txt 
+$ echo "This is a poem used for testing" > bashkim.txt 
 BashkimPC@BASHKIM ~ /bb19500 (master) 
 $ git status 
 on branch master 
